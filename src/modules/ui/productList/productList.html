@@ -1,0 +1,15 @@
+<template>
+    <div class="container slds-align_absolute-center">
+        <lightning-layout multiple-rows="true">
+            <template for:each={products} for:item="product" for:index="index">
+                <lightning-layout-item
+                    size="4"
+                    key={product.product_number}
+                    padding="around-small"
+                >
+                    <ui-product-tile product={product}> </ui-product-tile>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+    </div>
+</template>
