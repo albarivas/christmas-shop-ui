@@ -1,14 +1,49 @@
-# christmas-shop-ui
+# Christmas Shop UI
 
-Here will be some information about the app.
+Online Shop to buy Christmas items with credits won on familiar Christmas games (UI).
+Built with LWC OSS.
 
-## How to start?
+## Running Locally
 
-Start simple by running `yarn watch` (or `npm run watch`, if you set up the project with `npm`). This will start the project with a local development server.
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
-The source files are located in the [`src`](./src) folder. All web components are within the [`src/modules`](./src/modules) folder. The folder hierarchy also represents the naming structure of the web components.
+```sh
+$ git clone https://github.com/albarivas/christmas-shop-ui # or clone your own fork
+$ cd christmas-shop-ui
+$ npm install
+```
 
-Find more information on the main repo on [GitHub](https://github.com/muenzpraeger/create-lwc-app).
+Run the app locally for development, with hot reloading enabled.
+
+```sh
+$ npm run watch
+```
+
+Your app should now be running on [localhost:3001](http://localhost:3001/).
+
+## Deploying to Heroku
+
+```
+$ heroku create
+$ heroku addons:create heroku-postgresql:hobby-dev
+$ cat init.sql | heroku pg:psql
+$ git push heroku master
+$ heroku open
+```
+
+or
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+## Documentation
+
+For more information about using Node.js on Heroku, see these Dev Center articles:
+
+-   [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
+-   [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
+-   [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
+-   [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
+-   [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
 
 # Thanks to:
 
