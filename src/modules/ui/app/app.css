@@ -1,3 +1,35 @@
+.menu {
+    background-color: #c23934;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.5);
+}
+
+lightning-combobox {
+    width: 342px;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 0.25rem;
+    border: 1px solid #dddbda;
+}
+
+.left-section {
+    margin-right: auto;
+}
+
+.app-title {
+    color: white;
+    font-size: 75px;
+    font-family: Merry Christmas Flake;
+}
+
+.right-section {
+    width: 342px;
+    margin-left: auto;
+}
+
 .center {
     text-align: center;
 }
