@@ -32,10 +32,10 @@ ehthumbs.db
 $RECYCLE.BIN/
 
 # Salesforce Design System files
-src/resources/assets/fonts
-src/resources/assets/icons
-src/resources/assets/images
-src/resources/assets/styles
+src/resources/slds-assets/fonts
+src/resources/slds-assets/icons
+src/resources/slds-assets/images
+src/resources/slds-assets/styles
 
 # Build files
 dist/

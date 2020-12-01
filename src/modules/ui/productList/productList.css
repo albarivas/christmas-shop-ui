@@ -1,3 +1,8 @@
 .container {
     width: 1000px;
 }
+
+.app-title {
+    font-size: 100px;
+    font-family: Merry Christmas Flake;
+}

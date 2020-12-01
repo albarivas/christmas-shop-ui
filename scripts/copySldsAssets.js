@@ -9,6 +9,6 @@ SLDS_SUBFOLDERS.forEach((sub) => {
             '__dirname',
             `../node_modules/@salesforce-ux/design-system/assets/${sub}`
         ),
-        path.join('__dirname', `../src/resources/assets/${sub}`)
+        path.join('__dirname', `../src/resources/slds-assets/${sub}`)
     );
 });

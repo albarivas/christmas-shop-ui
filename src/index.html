@@ -11,81 +11,81 @@
         />
 
         <!-- Icons -->
-        <link rel="shortcut icon" href="/resources/shop-icons/favicon.ico" />
+        <link rel="shortcut icon" href="/resources/icons/favicon.ico" />
         <link
             rel="apple-touch-icon"
             sizes="57x57"
-            href="/resources/shop-icons/apple-icon-57x57.png"
+            href="/resources/icons/apple-icon-57x57.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="60x60"
-            href="/resources/shop-icons/apple-icon-60x60.png"
+            href="/resources/icons/apple-icon-60x60.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="72x72"
-            href="/resources/shop-icons/apple-icon-72x72.png"
+            href="/resources/icons/apple-icon-72x72.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="76x76"
-            href="/resources/shop-icons/apple-icon-76x76.png"
+            href="/resources/icons/apple-icon-76x76.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="114x114"
-            href="/resources/shop-icons/apple-icon-114x114.png"
+            href="/resources/icons/apple-icon-114x114.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="120x120"
-            href="/resources/shop-icons/apple-icon-120x120.png"
+            href="/resources/icons/apple-icon-120x120.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="144x144"
-            href="/resources/shop-icons/apple-icon-144x144.png"
+            href="/resources/icons/apple-icon-144x144.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="152x152"
-            href="/resources/shop-icons/apple-icon-152x152.png"
+            href="/resources/icons/apple-icon-152x152.png"
         />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/resources/shop-icons/apple-icon-180x180.png"
+            href="/resources/icons/apple-icon-180x180.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="192x192"
-            href="/resources/shop-icons/android-icon-192x192.png"
+            href="/resources/icons/android-icon-192x192.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/resources/shop-icons/favicon-32x32.png"
+            href="/resources/icons/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="96x96"
-            href="/resources/shop-icons/favicon-96x96.png"
+            href="/resources/icons/favicon-96x96.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/resources/shop-icons/favicon-16x16.png"
+            href="/resources/icons/favicon-16x16.png"
         />
-        <link rel="manifest" href="/resources/shop-icons/manifest.json" />
+        <link rel="manifest" href="/resources/icons/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta
             name="msapplication-TileImage"
-            content="/resources/shop-icons/ms-icon-144x144.png"
+            content="/resources/icons/ms-icon-144x144.png"
         />
         <meta name="theme-color" content="#ffffff" />
     </head>
@@ -95,9 +95,83 @@
     <link
         type="text/css"
         rel="stylesheet"
-        href="/resources/assets/styles/salesforce-lightning-design-system.min.css"
+        href="/resources/slds-assets/styles/salesforce-lightning-design-system.min.css"
     />
     <style>
+        @font-face {
+            font-family: 'Merry Christmas Flake';
+            src: url('/resources/fonts/MerryChristmasFlake.ttf')
+                format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Merry Christmas Star';
+            src: url('/resources/fonts/MerryChristmasStar.ttf')
+                format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        html {
+            background-color: #262ab1;
+            background-image: url('/resource/images/snow1.png'),
+                url('/resources/images/snow2.png'),
+                url('/resources/images/snow3.png');
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            -webkit-animation: snow 10s linear infinite;
+            -moz-animation: snow 10s linear infinite;
+            -ms-animation: snow 10s linear infinite;
+            animation: snow 10s linear infinite;
+        }
+        @keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+            100% {
+                background-position: 500px 1000px, 200px 400px, -100px 300px;
+            }
+        }
+        @-moz-keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+            100% {
+                background-position: 400px 1000px, 200px 400px, 100px 300px;
+            }
+        }
+        @-webkit-keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+            100% {
+                background-position: 500px 1000px, 200px 400px, -100px 300px;
+            }
+        }
+        @-ms-keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+            100% {
+                background-position: 500px 1000px, 200px 400px, -100px 300px;
+            }
+        }
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
