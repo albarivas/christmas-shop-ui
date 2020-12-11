@@ -3,7 +3,7 @@ lightning-card {
 }
 
 .product-name {
-    font-size: 30px;
+    font-size: 40px;
     font-family: Merry Christmas Star;
 }
 
@@ -12,10 +12,15 @@ lightning-card {
 }
 
 .units-in-inventory {
-    margin: 10px 0px;
-    font-style: italic;
+    padding: 5px 0px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .cost {
     font-size: 20px;
+}
+
+img {
+    max-width: 200px;
 }
