@@ -49,4 +49,3 @@ For more information about using Node.js on Heroku, see these Dev Center article
 
 https://codemyui.com/falling-snowflake-background-animation-pure-css/ (Snow falling CSS effect)
 https://www.dafont.com/merry-christmas.font (Christmas Fonts)
-https://www.dafont.com/christmas-lights.font(Christmas Fonts)

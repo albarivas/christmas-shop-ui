@@ -16,7 +16,7 @@ export default class App extends LightningElement {
     // TODO: get from server
     get options() {
         return [
-            { label: ' --- ', value: '0' },
+            { label: ' All Products ', value: '0' },
             { label: ' Ana', value: '1' },
             { label: ' Edi', value: '2' },
             { label: ' Raúl', value: '3' },

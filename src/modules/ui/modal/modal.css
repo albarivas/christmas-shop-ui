@@ -1,0 +1,8 @@
+.slds-notify-container {
+    top: 50%;
+    visibility: hidden;
+}
+
+svg {
+    color: white;
+}

@@ -7,11 +7,42 @@ lightning-card {
     font-family: Merry Christmas Star;
 }
 
-.units-in-inventory {
-    margin: 10px 0px;
-    font-style: italic;
+.description {
+    min-height: 44px;
 }
 
 .cost {
     font-size: 20px;
+    margin: 10px 0px;
+}
+
+.purchase {
+    margin: 20px 0px;
+    padding: 10px;
+    background-color: #ffdbdb;
+    border-radius: 0.25rem;
+}
+
+.add-to-cart {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+svg {
+    width: 52px;
+    height: 52px;
+}
+
+svg:hover {
+    fill: #07993e;
+    cursor: pointer;
+}
+
+lightning-combobox {
+    width: 245px;
+    margin: 20px 10px;
+    background-color: white;
+    border-radius: 0.25rem;
+    border: 1px solid #dddbda;
 }

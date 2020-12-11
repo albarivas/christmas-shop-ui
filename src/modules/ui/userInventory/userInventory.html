@@ -1,17 +1,31 @@
 <template>
-    <h2 class="page-title">mi inventario</h2>
+    <ui-modal></ui-modal>
     <div class="container slds-align_absolute-center">
-        <lightning-layout multiple-rows="true">
-            <template for:each={products} for:item="product" for:index="index">
-                <lightning-layout-item
-                    size="4"
-                    key={product.id}
-                    padding="around-small"
-                >
-                    <ui-user-product-tile product={product}>
-                    </ui-user-product-tile>
+        <template if:true={familyMember}>
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="12">
+                    <div class="credits">
+                        {familyMember.credits_available} credits available
+                    </div>
                 </lightning-layout-item>
-            </template>
-        </lightning-layout>
+                <template
+                    for:each={products}
+                    for:item="product"
+                    for:index="index"
+                >
+                    <lightning-layout-item
+                        size="4"
+                        large-device-size="4"
+                        medium-device-size="6"
+                        small-device-size="12"
+                        key={product.id}
+                        padding="around-small"
+                    >
+                        <ui-user-product-tile product={product}>
+                        </ui-user-product-tile>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </template>
     </div>
 </template>
