@@ -6,7 +6,7 @@
                 label="Family Member"
                 value={familyMemberId}
                 placeholder=" Select a family member to see his/her products"
-                options={options}
+                options={familyMembers}
                 onchange={handleChange}
                 variant="label-hidden"
             >
@@ -17,7 +17,7 @@
     </div>
     <div class="center">
         <template if:false={familyMemberId}>
-            <ui-product-list></ui-product-list>
+            <ui-product-list family-members={familyMembers}></ui-product-list>
         </template>
         <template if:true={familyMemberId}>
             <ui-user-inventory

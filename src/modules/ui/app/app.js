@@ -1,8 +1,10 @@
 import { LightningElement } from 'lwc';
+import { getFamilyMembers } from 'data/apiService';
 
 export default class App extends LightningElement {
     familyMemberId;
     state;
+    familyMembers = [];
 
     constructor() {
         super();
@@ -13,17 +15,22 @@ export default class App extends LightningElement {
         }
     }
 
-    // TODO: get from server
-    get options() {
-        return [
-            { label: ' All Products ', value: '0' },
-            { label: ' Ana', value: '1' },
-            { label: ' Edi', value: '2' },
-            { label: ' Raúl', value: '3' },
-            { label: ' Feli', value: '4' },
-            { label: ' Alba', value: '5' },
-            { label: ' Patxi', value: '6' }
-        ];
+    connectedCallback() {
+        getFamilyMembers()
+            .then((results) => {
+                const opts = [{ label: ' --- ', value: '0' }];
+                results.forEach((member) => {
+                    opts.push({
+                        label: member.family_member_name,
+                        value: ' ' + member.id
+                    });
+                });
+                this.familyMembers = opts;
+            })
+            .catch((error) => {
+                console.log(`Error retrieving family members: ${error}`);
+                this.showModal('error', 'Error retrieving family members');
+            });
     }
 
     handleChange(event) {

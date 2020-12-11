@@ -1,7 +1,8 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import { getProducts } from 'data/apiService';
 
 export default class ProductList extends LightningElement {
+    @api familyMembers;
     products = [];
 
     connectedCallback() {

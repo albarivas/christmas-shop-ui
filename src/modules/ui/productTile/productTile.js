@@ -4,6 +4,7 @@ import { purchaseProducts } from 'data/apiService';
 export default class ProductTile extends LightningElement {
     _product;
     familyMemberId;
+    @api familyMembers;
     unitsToPurchase;
 
     @api
@@ -22,7 +23,7 @@ export default class ProductTile extends LightningElement {
 
     // TODO: get from server
     get options() {
-        return [
+        /*     return [
             { label: ' --- ', value: '0' },
             { label: ' Ana', value: '1' },
             { label: ' Edi', value: '2' },
@@ -30,7 +31,8 @@ export default class ProductTile extends LightningElement {
             { label: ' Feli', value: '4' },
             { label: ' Alba', value: '5' },
             { label: ' Patxi', value: '6' }
-        ];
+        ];*/
+        return this.familyMembers;
     }
 
     handleComboboxChange(event) {
