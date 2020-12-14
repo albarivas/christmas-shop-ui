@@ -8,7 +8,7 @@
 }
 
 lightning-combobox {
-    width: 342px;
+    width: 190px;
     margin-left: 10px;
     background-color: white;
     border-radius: 0.25rem;
@@ -23,6 +23,7 @@ lightning-combobox {
     color: white;
     font-size: 75px;
     font-family: Merry Christmas Flake;
+    min-width: 320px;
 }
 
 .right-section {
