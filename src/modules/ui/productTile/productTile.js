@@ -18,20 +18,10 @@ export default class ProductTile extends LightningElement {
     }
 
     get pictureUrl() {
-        return `http://localhost:3002/${this.product.picture}`;
+        return `https://my-christmas-shop-api.herokuapp.com/${this.product.picture}`;
     }
 
-    // TODO: get from server
     get options() {
-        /*     return [
-            { label: ' --- ', value: '0' },
-            { label: ' Ana', value: '1' },
-            { label: ' Edi', value: '2' },
-            { label: ' Raúl', value: '3' },
-            { label: ' Feli', value: '4' },
-            { label: ' Alba', value: '5' },
-            { label: ' Patxi', value: '6' }
-        ];*/
         return this.familyMembers;
     }
 
