@@ -1,6 +1,6 @@
 const PRODUCTS_URL = `{{api_endpoint}}/api/v1/products`; // eslint-disable-line
 const MEMBERS_URL = `{{api_endpoint}}/api/v1/members`; // eslint-disable-line
-console.log('api_endpoint ' + {{api_endpoint}});
+console.log('PRODUCTS_URL ' + PRODUCTS_URL);
 export const getProducts = () =>
     fetch(PRODUCTS_URL)
         .then((response) => {
