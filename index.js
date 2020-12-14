@@ -12,9 +12,9 @@ const app = express();
 app.use(helmet());
 app.use(compression());
 app.use(express.static(DIST_DIR));
-app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'ejs');
 app.use('/', (req, res) => {
-    res.render(path.resolve(DIST_DIR, 'index.html'), {
+    res.render(path.resolve(DIST_DIR, 'index.ejs'), {
         api_endpoint: process.env.API_ENDPOINT // eslint-disable-line
     });
 });
