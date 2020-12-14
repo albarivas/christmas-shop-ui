@@ -1,6 +1,6 @@
 const PRODUCTS_URL = `${process.env.API_ENDPOINT}/api/v1/products`; // eslint-disable-line
 const MEMBERS_URL = `${process.env.API_ENDPOINT}/api/v1/members`; // eslint-disable-line
-console.log('Products URL ' + process.env);
+console.log('Products URL ' + JSON.stringify(process.env));
 export const getProducts = () =>
     fetch(PRODUCTS_URL)
         .then((response) => {
