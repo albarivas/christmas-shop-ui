@@ -11,6 +11,13 @@ const DIST_DIR = './dist';
 const app = express();
 app.use(helmet());
 app.use(compression());
+app.use(function (req, res, next) {
+    res.setHeader(
+        'Content-Security-Policy',
+        "script-src 'self' https://my-christmas-shop-api.herokuapp.com/"
+    );
+    return next();
+});
 app.use(express.static(DIST_DIR));
 app.use('/', (req, res) => {
     res.sendFile(path.resolve(DIST_DIR, 'index.html'));
