@@ -11,7 +11,7 @@ export default class App extends LightningElement {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         if (urlParams.has('member')) {
-            this.familyMemberId = urlParams.get('member'); // TODO: SOQL Injection
+            this.familyMemberId = urlParams.get('member');
         }
     }
 
