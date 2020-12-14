@@ -1,7 +1,7 @@
 const PRODUCTS_URL =
-    'https://my-christmas-shop-api.herokuapp.com//api/v1/products';
+    'https://my-christmas-shop-api.herokuapp.com/api/v1/products';
 const MEMBERS_URL =
-    'https://my-christmas-shop-api.herokuapp.com//api/v1/members';
+    'https://my-christmas-shop-api.herokuapp.com/api/v1/members';
 
 export const getProducts = () =>
     fetch(PRODUCTS_URL)
