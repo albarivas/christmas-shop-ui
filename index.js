@@ -13,7 +13,9 @@ app.use(helmet());
 app.use(compression());
 app.use(express.static(DIST_DIR));
 app.use('/', (req, res) => {
-    res.sendFile(path.resolve(DIST_DIR, 'index.html'));
+    res.render(path.resolve(DIST_DIR, 'index.html'), {
+        api_endpoint: process.env.API_ENDPOINT // eslint-disable-line
+    });
 });
 app.listen(PORT, () =>
     console.log(`✅  UI Server started: http://${HOST}:${PORT}`)
