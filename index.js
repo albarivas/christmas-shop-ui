@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
 
-const HOST = process.env.HOST || 'localhost';
+const HOST = process.env.HOST_NAME || 'localhost';
 const PORT = process.env.PORT || 3001;
 const DIST_DIR = './dist';
 

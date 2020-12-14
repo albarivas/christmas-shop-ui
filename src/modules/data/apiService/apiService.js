@@ -1,5 +1,5 @@
-const PRODUCTS_URL = 'http://localhost:3002/api/v1/products';
-const MEMBERS_URL = 'http://localhost:3002/api/v1/members';
+const PRODUCTS_URL = `${process.env.API_ENDPOINT}/api/v1/products`;
+const MEMBERS_URL = `${process.env.API_ENDPOINT}/api/v1/members`;
 
 export const getProducts = () =>
     fetch(PRODUCTS_URL)
