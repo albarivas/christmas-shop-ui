@@ -1,5 +1,5 @@
-const PRODUCTS_URL = `<%=api_endpoint%=>/api/v1/products`; // eslint-disable-line
-const MEMBERS_URL = `<%=api_endpoint%=>/api/v1/members`; // eslint-disable-line
+const PRODUCTS_URL = '<%=api_endpoint%=>/api/v1/products'; // eslint-disable-line
+const MEMBERS_URL = '<%=api_endpoint%=>/api/v1/members'; // eslint-disable-line
 console.log('PRODUCTS_URL ' + PRODUCTS_URL);
 export const getProducts = () =>
     fetch(PRODUCTS_URL)
