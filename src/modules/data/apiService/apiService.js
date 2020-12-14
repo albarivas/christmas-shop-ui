@@ -1,6 +1,8 @@
-const PRODUCTS_URL = '<%=api_endpoint%>/api/v1/products'; // eslint-disable-line
-const MEMBERS_URL = '<%=api_endpoint%>/api/v1/members'; // eslint-disable-line
-console.log('PRODUCTS_URL ' + PRODUCTS_URL);
+const PRODUCTS_URL =
+    'https://my-christmas-shop-api.herokuapp.com//api/v1/products';
+const MEMBERS_URL =
+    'https://my-christmas-shop-api.herokuapp.com//api/v1/members';
+
 export const getProducts = () =>
     fetch(PRODUCTS_URL)
         .then((response) => {
