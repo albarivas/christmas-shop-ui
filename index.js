@@ -4,8 +4,8 @@ const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
 
-const HOST = process.env.HOST_NAME || 'localhost';
-const PORT = process.env.PORT || 3001;
+const HOST = process.env.HOST_NAME || 'localhost'; // eslint-disable-line
+const PORT = process.env.PORT || 3001; // eslint-disable-line
 const DIST_DIR = './dist';
 
 const app = express();

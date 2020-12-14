@@ -47,4 +47,11 @@ export default class App extends LightningElement {
             window.history.pushState(this.state, null, `?member=${this.state}`);
         }
     }
+
+    showModal(type, message) {
+        const modal = this.template.querySelector('ui-modal');
+        modal.type = type;
+        modal.message = message;
+        modal.open();
+    }
 }

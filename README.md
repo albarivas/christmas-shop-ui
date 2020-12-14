@@ -25,9 +25,7 @@ Your app should now be running on [localhost:3001](http://localhost:3001/).
 
 ```
 $ heroku create
-$ heroku addons:create heroku-postgresql:hobby-dev
 $ heroku config:set API_ENDPOINT=https://[api-app-name].herokuapp.com
-$ cat init.sql | heroku pg:psql
 $ git push heroku master
 $ heroku open
 ```
