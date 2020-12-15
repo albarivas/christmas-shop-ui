@@ -19,7 +19,7 @@ Run the app locally for development, with hot reloading enabled.
 $ npm run watch
 ```
 
-Your app should now be running on [localhost:3001](http://localhost:3001/).
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Deploying to Heroku
 

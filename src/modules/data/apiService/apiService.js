@@ -1,7 +1,6 @@
-const PRODUCTS_URL =
-    'https://my-christmas-shop-api.herokuapp.com/api/v1/products';
-const MEMBERS_URL =
-    'https://my-christmas-shop-api.herokuapp.com/api/v1/members';
+const apiUrl = process.env.API_URL || 'http://localhost:5000'; // eslint-disable-line
+const PRODUCTS_URL = `${apiUrl}/api/v1/products`;
+const MEMBERS_URL = `${apiUrl}/api/v1/members`;
 
 export const getProducts = () =>
     fetch(PRODUCTS_URL)

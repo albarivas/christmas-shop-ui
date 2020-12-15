@@ -18,7 +18,8 @@ export default class ProductTile extends LightningElement {
     }
 
     get pictureUrl() {
-        return `https://my-christmas-shop-api.herokuapp.com/${this.product.picture}`;
+        const apiUrl = process.env.API_URL || 'http://localhost:5000';
+        return `${apiUrl}/${this.product.picture}`;
     }
 
     get options() {
