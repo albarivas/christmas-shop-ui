@@ -19,14 +19,13 @@ Run the app locally for development, with hot reloading enabled.
 $ npm run watch
 ```
 
-Your app should now be running on [localhost:3001](http://localhost:3001/).
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
 ## Deploying to Heroku
 
 ```
 $ heroku create
-$ heroku addons:create heroku-postgresql:hobby-dev
-$ cat init.sql | heroku pg:psql
+$ heroku config:set API_ENDPOINT=https://[api-app-name].herokuapp.com
 $ git push heroku master
 $ heroku open
 ```

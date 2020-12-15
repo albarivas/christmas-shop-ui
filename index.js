@@ -4,13 +4,18 @@ const helmet = require('helmet');
 const express = require('express');
 const path = require('path');
 
-const HOST = process.env.HOST || 'localhost';
-const PORT = process.env.PORT || 3001;
+const HOST = process.env.HOST_NAME || 'localhost'; // eslint-disable-line
+const PORT = process.env.PORT || 5000; // eslint-disable-line
+const API_URL = process.env.API_URL || 'http://localhost:5000'; // eslint-disable-line
 const DIST_DIR = './dist';
 
 const app = express();
 app.use(helmet());
 app.use(compression());
+app.use(function (req, res, next) {
+    res.setHeader('Content-Security-Policy', `script-src 'self' ${API_URL}`);
+    return next();
+});
 app.use(express.static(DIST_DIR));
 app.use('/', (req, res) => {
     res.sendFile(path.resolve(DIST_DIR, 'index.html'));

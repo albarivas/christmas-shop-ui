@@ -11,8 +11,14 @@ export default class App extends LightningElement {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         if (urlParams.has('member')) {
-            this.familyMemberId = urlParams.get('member'); // TODO: SOQL Injection
+            this.familyMemberId = urlParams.get('member');
         }
+        window.onpopstate = (event) => {
+            if (event.state) {
+                this.state = event.state;
+                this.familyMemberId = this.state;
+            }
+        };
     }
 
     connectedCallback() {
@@ -22,7 +28,7 @@ export default class App extends LightningElement {
                 results.forEach((member) => {
                     opts.push({
                         label: member.family_member_name,
-                        value: ' ' + member.id
+                        value: '' + member.id
                     });
                 });
                 this.familyMembers = opts;
@@ -46,5 +52,12 @@ export default class App extends LightningElement {
             this.familyMemberId = this.state;
             window.history.pushState(this.state, null, `?member=${this.state}`);
         }
+    }
+
+    showModal(type, message) {
+        const modal = this.template.querySelector('ui-modal');
+        modal.type = type;
+        modal.message = message;
+        modal.open();
     }
 }

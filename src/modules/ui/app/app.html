@@ -1,11 +1,12 @@
 <template>
+    <ui-modal></ui-modal>
     <div class="menu">
         <div class="left-section">
             <lightning-combobox
                 name="familymembers"
                 label="Family Member"
                 value={familyMemberId}
-                placeholder=" Select a family member to see his/her products"
+                placeholder=" Select a family member"
                 options={familyMembers}
                 onchange={handleChange}
                 variant="label-hidden"

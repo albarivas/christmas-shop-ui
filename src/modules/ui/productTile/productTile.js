@@ -18,20 +18,11 @@ export default class ProductTile extends LightningElement {
     }
 
     get pictureUrl() {
-        return `http://localhost:3002/${this.product.picture}`;
+        const apiUrl = process.env.API_URL || 'http://localhost:5000'; // eslint-disable-line
+        return `${apiUrl}/${this.product.picture}`;
     }
 
-    // TODO: get from server
     get options() {
-        /*     return [
-            { label: ' --- ', value: '0' },
-            { label: ' Ana', value: '1' },
-            { label: ' Edi', value: '2' },
-            { label: ' Raúl', value: '3' },
-            { label: ' Feli', value: '4' },
-            { label: ' Alba', value: '5' },
-            { label: ' Patxi', value: '6' }
-        ];*/
         return this.familyMembers;
     }
 

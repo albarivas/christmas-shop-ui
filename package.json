@@ -7,6 +7,7 @@
     "dependencies": {
         "@salesforce-ux/design-system": "^2.13.7",
         "compression": "^1.7.4",
+        "ejs": "^3.1.5",
         "express": "^4.17.1",
         "helmet": "^4.2.0",
         "lightning-base-components": "^1.10.6-alpha"
@@ -43,18 +44,18 @@
     },
     "repository": "Alba Rivas/christmas-shop-ui",
     "scripts": {
-        "build": "lwc-services build -m production",
-        "build:development": "lwc-services build",
+        "build": "lwc-services build -m production -w scripts/webpack.config.js",
+        "build:development": "lwc-services build -w scripts/webpack.config.js",
         "lint": "eslint ./src/**/*.js",
         "postinstall": "npm run prepare:slds",
         "prepare:slds": "node scripts/copySldsAssets.js",
         "prettier": "prettier --write \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
         "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
         "serve": "node index.js",
-        "test:unit": "lwc-services test:unit",
-        "test:unit:coverage": "lwc-services test:unit --coverage",
-        "test:unit:debug": "lwc-services test:unit --debug",
-        "test:unit:watch": "lwc-services test:unit --watch",
-        "watch": "lwc-services watch"
+        "test:unit": "lwc-services test:unit -w scripts/webpack.config.js",
+        "test:unit:coverage": "lwc-services test:unit --coverage -w scripts/webpack.config.js",
+        "test:unit:debug": "lwc-services test:unit --debug -w scripts/webpack.config.js",
+        "test:unit:watch": "lwc-services test:unit --watch -w scripts/webpack.config.js",
+        "watch": "lwc-services watch -w scripts/webpack.config.js"
     }
 }
