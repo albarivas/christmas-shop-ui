@@ -13,6 +13,12 @@ export default class App extends LightningElement {
         if (urlParams.has('member')) {
             this.familyMemberId = urlParams.get('member');
         }
+        window.onpopstate = (event) => {
+            if (event.state) {
+                this.state = event.state;
+                this.familyMemberId = this.state;
+            }
+        };
     }
 
     connectedCallback() {
@@ -22,7 +28,7 @@ export default class App extends LightningElement {
                 results.forEach((member) => {
                     opts.push({
                         label: member.family_member_name,
-                        value: ' ' + member.id
+                        value: '' + member.id
                     });
                 });
                 this.familyMembers = opts;
