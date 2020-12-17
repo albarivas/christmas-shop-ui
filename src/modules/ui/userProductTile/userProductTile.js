@@ -4,6 +4,7 @@ export default class ProductTile extends LightningElement {
     @api product;
 
     get pictureUrl() {
-        return `http://localhost:3002/${this.product.picture}`;
+        const apiUrl = process.env.API_ENDPOINT || 'http://localhost:5000'; // eslint-disable-line
+        return `${apiUrl}/${this.product.picture}`;
     }
 }
