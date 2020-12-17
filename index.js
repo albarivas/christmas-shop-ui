@@ -6,14 +6,17 @@ const path = require('path');
 
 const HOST = process.env.HOST_NAME || 'localhost'; // eslint-disable-line
 const PORT = process.env.PORT || 5000; // eslint-disable-line
-const API_URL = process.env.API_URL || 'http://localhost:5000'; // eslint-disable-line
+const API_ENDPOINT = process.env.API_ENDPOINT || 'http://localhost:5000'; // eslint-disable-line
 const DIST_DIR = './dist';
 
 const app = express();
 app.use(helmet());
 app.use(compression());
 app.use(function (req, res, next) {
-    res.setHeader('Content-Security-Policy', `script-src 'self' ${API_URL}`);
+    res.setHeader(
+        'Content-Security-Policy',
+        `script-src 'self' ${API_ENDPOINT}`
+    );
     return next();
 });
 app.use(express.static(DIST_DIR));

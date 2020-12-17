@@ -1,4 +1,4 @@
-const apiUrl = process.env.API_URL || 'http://localhost:5000'; // eslint-disable-line
+const apiUrl = process.env.API_ENDPOINT || 'http://localhost:5000'; // eslint-disable-line
 const PRODUCTS_URL = `${apiUrl}/api/v1/products`;
 const MEMBERS_URL = `${apiUrl}/api/v1/members`;
 
